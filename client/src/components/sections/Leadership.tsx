@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
@@ -54,6 +55,8 @@ export default function Leadership() {
                       <a 
                         href={leader.linkedin} 
                         className="text-gray-400 hover:text-red-500 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <Linkedin className="h-5 w-5" />
                       </a>
