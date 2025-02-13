@@ -3,7 +3,8 @@ import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Features from '@/components/sections/Features';
-import Team from '@/components/sections/Team';
+import Achievements from '@/components/sections/Achievements';
+import Leadership from '@/components/sections/Leadership';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 
@@ -19,7 +20,8 @@ export default function Home() {
         <Hero />
         <About />
         <Features />
-        <Team />
+        <Achievements />
+        <Leadership />
         <Contact />
       </main>
       <Footer />

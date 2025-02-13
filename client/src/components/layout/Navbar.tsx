@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Linkedin, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
@@ -9,10 +9,15 @@ export default function Navbar() {
 
   const navItems = [
     { href: '#services', label: 'Services' },
+    { href: '#achievements', label: 'Achievements' },
+    { href: '#leadership', label: 'Meet Our Leadership' },
     { href: '#features', label: 'Features' },
-    { href: '#team', label: 'Team' },
     { href: '#contact', label: 'Contact' }
   ];
+
+  const openWhatsApp = () => {
+    window.open('https://wa.me/919527500586', '_blank');
+  };
 
   return (
     <nav className="fixed w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50 border-b border-border">
@@ -28,7 +33,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -38,6 +43,22 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
+            <div className="flex items-center space-x-4">
+              <a 
+                href="https://www.linkedin.com/company/trinetrasecurity/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/80 hover:text-foreground"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <button 
+                onClick={openWhatsApp}
+                className="text-foreground/80 hover:text-foreground"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </button>
+            </div>
             <Button className="bg-red-600 hover:bg-red-700">Get Free Audit</Button>
           </div>
 
@@ -73,6 +94,22 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
+            <div className="flex items-center space-x-4 px-3 py-2">
+              <a 
+                href="https://www.linkedin.com/company/trinetrasecurity/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/80 hover:text-foreground"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <button 
+                onClick={openWhatsApp}
+                className="text-foreground/80 hover:text-foreground"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </button>
+            </div>
             <div className="px-3 py-2">
               <Button className="w-full bg-red-600 hover:bg-red-700">Get Free Audit</Button>
             </div>
