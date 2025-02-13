@@ -1,39 +1,64 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Linkedin, Instagram, Mail, Search, Shield, RotateCw } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-16 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen pt-16 bg-black text-white relative">
+      {/* Social Icons */}
+      <div className="absolute top-4 right-4 flex items-center gap-4">
+        <a href="#" className="text-white hover:text-red-600 transition-colors">
+          <Linkedin className="h-6 w-6" />
+        </a>
+        <a href="#" className="text-white hover:text-red-600 transition-colors">
+          <Instagram className="h-6 w-6" />
+        </a>
+        <a href="#" className="text-white hover:text-red-600 transition-colors">
+          <Mail className="h-6 w-6" />
+        </a>
+        <Button className="bg-red-600 hover:bg-red-700">
+          Book Now
+        </Button>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            className="space-y-8"
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              Dedicated to{' '}
-              <span className="text-red-600">Securing</span> Your Business
-            </h1>
-            <p className="mt-6 text-xl text-gray-300">
-              By Finding and Fixing Vulnerabilities
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                className="bg-red-600 hover:bg-red-700 text-white group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-red-600 text-red-600 hover:bg-red-600/10"
-              >
-                Learn More
-              </Button>
+            <div className="space-y-6">
+              <p className="text-xl text-gray-300">COMPREHENSIVE TESTING, COMPLETE SECURITY</p>
+              <h1 className="text-6xl sm:text-7xl font-bold leading-tight uppercase">
+                Penetration<br />Testing<br />Services
+              </h1>
+              <p className="text-xl text-gray-300">
+                Book a free consultation meet to assess your unique security needs with our specialists
+              </p>
+            </div>
+            <Button 
+              size="lg" 
+              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 h-auto"
+            >
+              Begin Security Assessment
+            </Button>
+
+            {/* Service Icons */}
+            <div className="grid grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <Shield className="h-12 w-12 mx-auto mb-2 text-red-600" />
+                <p className="text-sm">Secure Your System & Services</p>
+              </div>
+              <div className="text-center">
+                <Search className="h-12 w-12 mx-auto mb-2 text-red-600" />
+                <p className="text-sm">Identify Security Gaps</p>
+              </div>
+              <div className="text-center">
+                <RotateCw className="h-12 w-12 mx-auto mb-2 text-red-600" />
+                <p className="text-sm">Free Re-testing of Patched Issues</p>
+              </div>
             </div>
           </motion.div>
 
@@ -43,13 +68,15 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-square rounded-full bg-red-600/10 absolute -top-4 -right-4 w-72 h-72 blur-3xl" />
-            <img
-              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-              alt="Cybersecurity Visualization"
-              className="rounded-lg shadow-2xl relative z-10"
-            />
-            <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
+            <div className="relative">
+              <div className="absolute -top-4 -right-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
+                alt="Cybersecurity Shield"
+                className="rounded-lg relative z-10 w-full"
+              />
+              <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
+            </div>
           </motion.div>
         </div>
       </div>
