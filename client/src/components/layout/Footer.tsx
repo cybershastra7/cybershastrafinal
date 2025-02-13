@@ -90,6 +90,20 @@ export default function Footer() {
           </div>
         </div>
 
+        <div id="calendly-section" className="mt-12 pt-8 border-t border-border">
+          <h2 className="text-2xl font-bold text-center mb-6">Schedule a Meeting</h2>
+          <div className="w-full max-w-4xl mx-auto">
+            <div className="aspect-[3/2] w-full">
+              <iframe
+                src="YOUR_CALENDLY_LINK_HERE"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                className="rounded-lg shadow-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>&copy; {currentYear} CyberShastra. All rights reserved.</p>
         </div>

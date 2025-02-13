@@ -6,7 +6,7 @@ const leaders = [
   {
     name: 'Ashwin Pawar',
     role: 'CEO',
-    image: '/attached_assets/ashwin.jpeg',
+    image: '/public/attached_assets/ashwin.jpeg',
     description: 'CEO and AI Expert, integrating advanced AI technologies to revolutionize cybersecurity solutions for our clients.',
     linkedin: '#'
   },

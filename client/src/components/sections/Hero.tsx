@@ -85,9 +85,10 @@ export default function Hero() {
             >
               <Button 
                 size="lg" 
+                onClick={() => document.getElementById('calendly-section')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 h-auto transition-all duration-300"
               >
-                Begin Security Assessment
+                Get Started
               </Button>
             </motion.div>
 
