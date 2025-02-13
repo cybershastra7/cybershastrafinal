@@ -1,19 +1,55 @@
 import { motion } from 'framer-motion';
-import { SiNetflix, SiLenovo } from 'react-icons/si';
-import { RiGovernmentLine } from 'react-icons/ri';
-import { LuSchool } from 'react-icons/lu';
-import { BiBuildings, BiServer } from 'react-icons/bi';
-import { FaDatabase, FaGlobeAmericas } from 'react-icons/fa';
+import { Server, Globe, Monitor, Laptop, Building2, Building, Database, BookOpen } from 'lucide-react';
 
 const companies = [
-  { icon: BiServer, name: 'IBM', bg: 'bg-white' },
-  { icon: FaGlobeAmericas, name: 'NASA', bg: 'bg-white' },
-  { icon: SiNetflix, name: 'Netflix', bg: 'bg-[#E50914]' },
-  { icon: SiLenovo, name: 'Lenovo', bg: 'bg-[#E2231A]' },
-  { icon: LuSchool, name: 'Drexel', bg: 'bg-[#FDB930]' },
-  { icon: RiGovernmentLine, name: 'Stanford', bg: 'bg-[#8C1515]' },
-  { icon: BiBuildings, name: 'Government of India', bg: 'bg-white' },
-  { icon: FaDatabase, name: 'RBA', bg: 'bg-white' }
+  {
+    icon: Server,
+    name: 'IBM',
+    bg: 'bg-white',
+    iconColor: 'text-[#0530AD]'
+  },
+  {
+    icon: Globe,
+    name: 'NASA',
+    bg: 'bg-white',
+    iconColor: 'text-[#0B3D91]'
+  },
+  {
+    icon: Monitor,
+    name: 'Netflix',
+    bg: 'bg-[#E50914]',
+    iconColor: 'text-white'
+  },
+  {
+    icon: Laptop,
+    name: 'Lenovo',
+    bg: 'bg-[#E2231A]',
+    iconColor: 'text-white'
+  },
+  {
+    icon: BookOpen,
+    name: 'Drexel',
+    bg: 'bg-[#FDB930]',
+    iconColor: 'text-[#07294D]'
+  },
+  {
+    icon: Building2,
+    name: 'Stanford',
+    bg: 'bg-[#8C1515]',
+    iconColor: 'text-white'
+  },
+  {
+    icon: Building,
+    name: 'Government of India',
+    bg: 'bg-white',
+    iconColor: 'text-[#FF9933]'
+  },
+  {
+    icon: Database,
+    name: 'RBA',
+    bg: 'bg-white',
+    iconColor: 'text-[#000000]'
+  }
 ];
 
 export default function Achievements() {
@@ -43,7 +79,7 @@ export default function Achievements() {
               className="flex items-center justify-center"
             >
               <div className={`${company.bg} p-6 rounded-lg w-full aspect-square flex items-center justify-center`}>
-                <company.icon className="w-16 h-16" />
+                <company.icon className={`w-16 h-16 ${company.iconColor}`} />
               </div>
             </motion.div>
           ))}
