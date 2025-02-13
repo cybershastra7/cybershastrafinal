@@ -39,7 +39,21 @@ export default function Hero() {
           <Mail className="h-6 w-6" />
         </motion.a>
         <motion.div whileHover={{ scale: 1.05 }}>
-          <Button className="bg-red-600 hover:bg-red-700 transition-all duration-300">
+          <Button 
+            className="bg-red-600 hover:bg-red-700 transition-all duration-300"
+            onClick={() => {
+              const element = document.querySelector('#calendly');
+              if (element) {
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+          >
             Get Free Audit
           </Button>
         </motion.div>
@@ -86,11 +100,14 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 onClick={() => {
-                  const element = document.getElementById('calendly-section');
+                  const element = document.querySelector('#calendly');
                   if (element) {
-                    element.scrollIntoView({ 
-                      behavior: 'smooth',
-                      block: 'start'
+                    const offset = 80;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
                     });
                   }
                 }}
@@ -100,9 +117,9 @@ export default function Hero() {
               </Button>
             </motion.div>
 
-            {/* Service Icons */}
+            {/* Service Icons - Updated with specified services */}
             <motion.div 
-              className="grid grid-cols-3 gap-8 mt-12"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"  {/* Adjusted grid for better layout */}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -113,7 +130,7 @@ export default function Hero() {
                 transition={{ duration: 0.2 }}
               >
                 <Shield className="h-12 w-12 mx-auto mb-2 text-red-600" />
-                <p className="text-sm">Secure Your System & Services</p>
+                <p className="text-sm">Web Application VAPT</p>
               </motion.div>
               <motion.div 
                 className="text-center"
@@ -121,7 +138,7 @@ export default function Hero() {
                 transition={{ duration: 0.2 }}
               >
                 <Search className="h-12 w-12 mx-auto mb-2 text-red-600" />
-                <p className="text-sm">Identify Security Gaps</p>
+                <p className="text-sm">API Testing</p>
               </motion.div>
               <motion.div 
                 className="text-center"
@@ -129,7 +146,15 @@ export default function Hero() {
                 transition={{ duration: 0.2 }}
               >
                 <RotateCw className="h-12 w-12 mx-auto mb-2 text-red-600" />
-                <p className="text-sm">Free Re-testing of Patched Issues</p>
+                <p className="text-sm">Mobile VAPT</p>
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1, y: -5 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Shield className="h-12 w-12 mx-auto mb-2 text-red-600" /> {/* Using Shield icon as a placeholder */}
+                <p className="text-sm">Cyber Awareness</p>
               </motion.div>
             </motion.div>
           </motion.div>

@@ -1,33 +1,34 @@
+
 import { motion } from 'framer-motion';
-import { Shield, Lock, AlertTriangle, Search } from 'lucide-react';
+import { Shield, Lock, AlertTriangle, BookOpen } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 const features = [
   {
     icon: Shield,
-    title: 'Advanced Protection',
-    description: 'Multi-layered security solutions to safeguard your digital assets'
-  },
-  {
-    icon: Search,
-    title: 'Vulnerability Assessment',
-    description: 'Comprehensive scanning and analysis of your security infrastructure'
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Threat Detection',
-    description: 'Real-time monitoring and response to security threats'
+    title: 'Web Application VAPT',
+    description: 'Comprehensive vulnerability assessment and penetration testing for web applications'
   },
   {
     icon: Lock,
-    title: 'Secure Access',
-    description: 'Controlled access management and authentication systems'
+    title: 'API Testing',
+    description: 'In-depth security testing of API endpoints and services'
+  },
+  {
+    icon: AlertTriangle,
+    title: 'Mobile VAPT',
+    description: 'Security assessment for mobile applications across platforms'
+  },
+  {
+    icon: BookOpen,
+    title: 'Cyber Awareness',
+    description: 'Training and education for enhanced cybersecurity awareness'
   }
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-muted/50">
+    <section id="services" className="py-24 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +41,7 @@ export default function Features() {
             Comprehensive Security Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Protect your organization with our state-of-the-art cybersecurity features
+            Protect your organization with our state-of-the-art cybersecurity services
             designed to keep you safe in today's digital landscape.
           </p>
         </motion.div>

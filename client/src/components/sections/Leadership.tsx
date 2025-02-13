@@ -8,19 +8,19 @@ const leaders = [
     name: 'Ashwin Pawar', 
     role: 'CEO', 
     description: 'CEO and AI Expert, integrating advanced AI technologies.', 
-    linkedin: 'https://www.linkedin.com/in/ashwin-pawar-cybershastra/' 
+    linkedin: 'https://www.linkedin.com/in/ashwin-pawar-a53408350/' 
   },
   { 
     name: 'Gaurish Bahurupi', 
     role: 'CTO', 
     description: 'CTO and Red Team Specialist, focused on advanced offensive strategies.', 
-    linkedin: 'https://www.linkedin.com/in/gaurish-bahurupi-ab3079216/' 
+    linkedin: 'https://www.linkedin.com/in/gaurish-bahurupi/' 
   },
   { 
     name: 'Prajwal Chitwar', 
     role: 'CFO', 
     description: 'CFO, managing finances to drive growth.', 
-    linkedin: 'https://www.linkedin.com/in/prajwal-chitwar/' 
+    linkedin: 'https://www.linkedin.com/in/prajwalchitwar/' 
   }
 ];
 
