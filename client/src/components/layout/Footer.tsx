@@ -90,13 +90,6 @@ export default function Footer() {
           </div>
         </div>
 
-        <div id="calendly-section" className="mt-12 pt-8 border-t border-border">
-          <h2 className="text-2xl font-bold text-center mb-6">Schedule a Meeting</h2>
-          <div className="w-full max-w-4xl mx-auto">
-            <div className="calendly-inline-widget" data-url="https://calendly.com/cybershastra7/30min" style={{minWidth: "320px", height: "700px"}}></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          </div>
-        </div>
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>&copy; {currentYear} CyberShastra. All rights reserved.</p>
         </div>
