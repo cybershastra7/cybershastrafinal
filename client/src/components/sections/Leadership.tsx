@@ -3,27 +3,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
 
 const leaders = [
-  {
-    name: 'Ashwin Pawar',
-    role: 'CEO',
-    image: '/public/attached_assets/ashwin.jpeg',
-    description: 'CEO and AI Expert, integrating advanced AI technologies to revolutionize cybersecurity solutions for our clients.',
-    linkedin: '#'
-  },
-  {
-    name: 'Gaurish Bahurupi',
-    role: 'CTO',
-    image: '/attached_assets/gaurish.jpg',
-    description: 'CTO and Red Team Specialist, focused on strengthening cybersecurity with advanced offensive strategies to help clients stay secure.',
-    linkedin: '#'
-  },
-  {
-    name: 'Prajwal Chitwar',
-    role: 'CFO',
-    image: '/attached_assets/prajwal.jpg',
-    description: 'CFO, managing finances to drive growth and support our cybersecurity innovations.',
-    linkedin: '#'
-  }
+  { name: 'Ashwin Pawar', role: 'CEO', image: '/attached_assets/ashwin.jpeg', description: 'CEO and AI Expert, integrating advanced AI technologies.', linkedin: '#' },
+  { name: 'Gaurish Bahurupi', role: 'CTO', image: '/attached_assets/gaurish.jpg', description: 'CTO and Red Team Specialist, focused on advanced offensive strategies.', linkedin: '#' },
+  { name: 'Prajwal Chitwar', role: 'CFO', image: '/attached_assets/prajwal.jpg', description: 'CFO, managing finances to drive growth.', linkedin: '#' }
 ];
 
 export default function Leadership() {
@@ -61,6 +43,7 @@ export default function Leadership() {
                       src={leader.image}
                       alt={leader.name}
                       className="object-cover w-full h-full transition-transform hover:scale-105"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6">
