@@ -17,7 +17,7 @@ export default function Hero() {
           <Mail className="h-6 w-6" />
         </a>
         <Button className="bg-red-600 hover:bg-red-700">
-          Book Now
+          Get Free Audit
         </Button>
       </div>
 
@@ -70,11 +70,9 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="absolute -top-4 -right-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
-              <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
-                alt="Cybersecurity Shield"
-                className="rounded-lg relative z-10 w-full"
-              />
+              <div className="h-full w-full flex items-center justify-center">
+                <div className="w-full h-[400px] bg-gradient-to-br from-red-600/20 to-transparent rounded-lg backdrop-blur-sm border border-red-600/20" />
+              </div>
               <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
             </div>
           </motion.div>

@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
+    { href: '#services', label: 'Services' },
     { href: '#features', label: 'Features' },
     { href: '#team', label: 'Team' },
     { href: '#contact', label: 'Contact' }
@@ -37,7 +38,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <Button>Get Started</Button>
+            <Button className="bg-red-600 hover:bg-red-700">Get Free Audit</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -73,7 +74,7 @@ export default function Navbar() {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full">Get Started</Button>
+              <Button className="w-full bg-red-600 hover:bg-red-700">Get Free Audit</Button>
             </div>
           </div>
         </motion.div>
