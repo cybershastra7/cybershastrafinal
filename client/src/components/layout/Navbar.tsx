@@ -11,7 +11,6 @@ export default function Navbar() {
     { href: '#services', label: 'Services' },
     { href: '#achievements', label: 'Achievements' },
     { href: '#leadership', label: 'Meet Our Leadership' },
-    { href: '#features', label: 'Features' },
     { href: '#contact', label: 'Contact' }
   ];
 
@@ -22,9 +21,9 @@ export default function Navbar() {
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsOpen(false);
     }
-    setIsOpen(false);
   };
 
   return (
@@ -44,7 +43,7 @@ export default function Navbar() {
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className="text-foreground/80 hover:text-foreground cursor-pointer transition-colors"
@@ -52,7 +51,7 @@ export default function Navbar() {
                 transition={{ duration: 0.2 }}
               >
                 {item.label}
-              </motion.a>
+              </motion.button>
             ))}
             <div className="flex items-center space-x-4">
               <motion.a 
@@ -105,15 +104,15 @@ export default function Navbar() {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-b border-border">
             {navItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block px-3 py-2 text-base font-medium text-foreground/80 hover:text-foreground cursor-pointer"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-foreground/80 hover:text-foreground cursor-pointer"
                 whileHover={{ x: 10 }}
                 transition={{ duration: 0.2 }}
               >
                 {item.label}
-              </motion.a>
+              </motion.button>
             ))}
             <div className="flex items-center space-x-4 px-3 py-2">
               <motion.a 

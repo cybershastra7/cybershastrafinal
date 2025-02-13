@@ -124,25 +124,6 @@ export default function Hero() {
               </motion.div>
             </motion.div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative mt-16"
-          >
-            <div className="relative">
-              <div className="absolute -top-4 -right-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
-              <div className="relative w-full h-[600px] rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop"
-                  alt="Cybersecurity Visualization"
-                  className="w-full h-full object-cover rounded-lg opacity-75"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

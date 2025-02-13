@@ -98,8 +98,9 @@ export default function Achievements() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-center justify-center"
             >
-              <div className={`${company.bg} p-4 rounded-lg w-full aspect-square flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300`}>
-                <company.icon className={`w-12 h-12 ${company.iconColor}`} />
+              <div className={`${company.bg} p-4 rounded-lg w-full aspect-square flex flex-col items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300`}>
+                <company.icon className={`w-12 h-12 ${company.iconColor} mb-2`} />
+                <p className={`text-sm font-medium mt-2 ${company.iconColor}`}>{company.name}</p>
               </div>
             </motion.div>
           ))}

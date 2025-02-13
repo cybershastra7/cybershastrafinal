@@ -19,10 +19,10 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Features />
-        <Achievements />
-        <Leadership />
-        <Contact />
+        <Features id="services" />
+        <Achievements id="achievements" />
+        <Leadership id="leadership" />
+        <Contact id="contact" />
       </main>
       <Footer />
     </div>
