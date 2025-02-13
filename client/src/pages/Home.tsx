@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
+import Calendly from '@/components/sections/Calendly';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Features from '@/components/sections/Features';
@@ -22,6 +23,7 @@ export default function Home() {
         <Features id="services" />
         <Achievements id="achievements" />
         <Leadership id="leadership" />
+        <Calendly />
         <Contact id="contact" />
       </main>
       <Footer />
