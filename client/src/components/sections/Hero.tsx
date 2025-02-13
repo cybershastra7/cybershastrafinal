@@ -4,19 +4,23 @@ import { Linkedin, Instagram, Mail, Search, Shield, RotateCw } from 'lucide-reac
 
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-16 bg-black text-white relative">
+    <section className="min-h-screen pt-16 bg-black text-white relative overflow-hidden">
+      {/* Background Gradients */}
+      <div className="absolute -top-20 -right-20 w-72 h-72 bg-red-600/20 rounded-full blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-red-600/20 rounded-full blur-3xl" />
+
       {/* Social Icons */}
       <div className="absolute top-4 right-4 flex items-center gap-4">
-        <a href="#" className="text-white hover:text-red-600 transition-colors">
+        <a href="#" className="text-white hover:text-red-600 transition-colors duration-300">
           <Linkedin className="h-6 w-6" />
         </a>
-        <a href="#" className="text-white hover:text-red-600 transition-colors">
+        <a href="#" className="text-white hover:text-red-600 transition-colors duration-300">
           <Instagram className="h-6 w-6" />
         </a>
-        <a href="#" className="text-white hover:text-red-600 transition-colors">
+        <a href="#" className="text-white hover:text-red-600 transition-colors duration-300">
           <Mail className="h-6 w-6" />
         </a>
-        <Button className="bg-red-600 hover:bg-red-700">
+        <Button className="bg-red-600 hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
           Get Free Audit
         </Button>
       </div>
@@ -32,7 +36,7 @@ export default function Hero() {
             <div className="space-y-6">
               <p className="text-xl text-gray-300">COMPREHENSIVE TESTING, COMPLETE SECURITY</p>
               <h1 className="text-6xl sm:text-7xl font-bold leading-tight uppercase">
-                Penetration<br />Testing<br />Services
+                AI Driven<br />Cybersecurity<br />Services
               </h1>
               <p className="text-xl text-gray-300">
                 Book a free consultation meet to assess your unique security needs with our specialists
@@ -40,25 +44,37 @@ export default function Hero() {
             </div>
             <Button 
               size="lg" 
-              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 h-auto"
+              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 h-auto transition-all duration-300 transform hover:scale-105"
             >
               Begin Security Assessment
             </Button>
 
             {/* Service Icons */}
             <div className="grid grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
                 <Shield className="h-12 w-12 mx-auto mb-2 text-red-600" />
                 <p className="text-sm">Secure Your System & Services</p>
-              </div>
-              <div className="text-center">
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
                 <Search className="h-12 w-12 mx-auto mb-2 text-red-600" />
                 <p className="text-sm">Identify Security Gaps</p>
-              </div>
-              <div className="text-center">
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
                 <RotateCw className="h-12 w-12 mx-auto mb-2 text-red-600" />
                 <p className="text-sm">Free Re-testing of Patched Issues</p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -70,8 +86,13 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="absolute -top-4 -right-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
-              <div className="h-full w-full flex items-center justify-center">
-                <div className="w-full h-[400px] bg-gradient-to-br from-red-600/20 to-transparent rounded-lg backdrop-blur-sm border border-red-600/20" />
+              <div className="relative w-full h-[600px] rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop"
+                  alt="Cybersecurity Visualization"
+                  className="w-full h-full object-cover rounded-lg opacity-75"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
             </div>

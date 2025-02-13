@@ -19,6 +19,14 @@ export default function Navbar() {
     window.open('https://wa.me/919527500586', '_blank');
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,6 +35,7 @@ export default function Navbar() {
             <motion.div 
               className="text-2xl font-bold cursor-pointer"
               whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             >
               CyberShastra
             </motion.div>
@@ -35,31 +44,42 @@ export default function Navbar() {
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
+              <motion.a
                 key={item.href}
-                href={item.href}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                onClick={() => scrollToSection(item.href)}
+                className="text-foreground/80 hover:text-foreground cursor-pointer transition-colors"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               >
                 {item.label}
-              </a>
+              </motion.a>
             ))}
             <div className="flex items-center space-x-4">
-              <a 
+              <motion.a 
                 href="https://www.linkedin.com/company/trinetrasecurity/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-foreground"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <button 
+              </motion.a>
+              <motion.button 
                 onClick={openWhatsApp}
                 className="text-foreground/80 hover:text-foreground"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
               >
                 <MessageCircle className="h-5 w-5" />
-              </button>
+              </motion.button>
             </div>
-            <Button className="bg-red-600 hover:bg-red-700">Get Free Audit</Button>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Button className="bg-red-600 hover:bg-red-700">Get Free Audit</Button>
+            </motion.div>
           </div>
 
           {/* Mobile menu button */}
@@ -85,30 +105,35 @@ export default function Navbar() {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-b border-border">
             {navItems.map((item) => (
-              <a
+              <motion.a
                 key={item.href}
-                href={item.href}
-                className="block px-3 py-2 text-base font-medium text-foreground/80 hover:text-foreground"
-                onClick={() => setIsOpen(false)}
+                onClick={() => scrollToSection(item.href)}
+                className="block px-3 py-2 text-base font-medium text-foreground/80 hover:text-foreground cursor-pointer"
+                whileHover={{ x: 10 }}
+                transition={{ duration: 0.2 }}
               >
                 {item.label}
-              </a>
+              </motion.a>
             ))}
             <div className="flex items-center space-x-4 px-3 py-2">
-              <a 
+              <motion.a 
                 href="https://www.linkedin.com/company/trinetrasecurity/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-foreground"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <button 
+              </motion.a>
+              <motion.button 
                 onClick={openWhatsApp}
                 className="text-foreground/80 hover:text-foreground"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
               >
                 <MessageCircle className="h-5 w-5" />
-              </button>
+              </motion.button>
             </div>
             <div className="px-3 py-2">
               <Button className="w-full bg-red-600 hover:bg-red-700">Get Free Audit</Button>
