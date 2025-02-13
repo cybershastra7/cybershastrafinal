@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-16 flex items-center">
+    <section className="min-h-screen pt-16 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -12,20 +12,26 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              Secure Your Digital Future with{' '}
-              <span className="text-red-600">CyberShastra</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+              Dedicated to{' '}
+              <span className="text-red-600">Securing</span> Your Business
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Advanced cybersecurity solutions to protect your business from evolving digital threats.
-              Stay one step ahead with our expert team and cutting-edge technology.
+            <p className="mt-6 text-xl text-gray-300">
+              By Finding and Fixing Vulnerabilities
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button size="lg" className="group">
+              <Button 
+                size="lg" 
+                className="bg-red-600 hover:bg-red-700 text-white group"
+              >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-red-600 text-red-600 hover:bg-red-600/10"
+              >
                 Learn More
               </Button>
             </div>
@@ -43,18 +49,7 @@ export default function Hero() {
               alt="Cybersecurity Visualization"
               className="rounded-lg shadow-2xl relative z-10"
             />
-            <motion.div
-              className="absolute -bottom-4 -left-4 bg-background p-4 rounded-lg shadow-lg flex items-center gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Shield className="text-red-600 h-8 w-8" />
-              <div>
-                <p className="font-semibold">Protected</p>
-                <p className="text-sm text-muted-foreground">24/7 Security Monitoring</p>
-              </div>
-            </motion.div>
+            <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
           </motion.div>
         </div>
       </div>
