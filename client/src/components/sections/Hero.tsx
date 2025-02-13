@@ -85,7 +85,15 @@ export default function Hero() {
             >
               <Button 
                 size="lg" 
-                onClick={() => document.getElementById('calendly-section')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const element = document.getElementById('calendly-section');
+                  if (element) {
+                    element.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }}
                 className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 h-auto transition-all duration-300"
               >
                 Get Started
