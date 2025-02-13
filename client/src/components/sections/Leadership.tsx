@@ -6,21 +6,21 @@ const leaders = [
   {
     name: 'Ashwin Pawar',
     role: 'CEO',
-    image: '/ashwin.jpeg',
+    image: '/attached_assets/ashwin.jpeg',
     description: 'CEO and AI Expert, integrating advanced AI technologies to revolutionize cybersecurity solutions for our clients.',
     linkedin: '#'
   },
   {
     name: 'Gaurish Bahurupi',
     role: 'CTO',
-    image: '/gaurish.jpg',
+    image: '/attached_assets/gaurish.jpg',
     description: 'CTO and Red Team Specialist, focused on strengthening cybersecurity with advanced offensive strategies to help clients stay secure.',
     linkedin: '#'
   },
   {
     name: 'Prajwal Chitwar',
     role: 'CFO',
-    image: '/prajwal.jpg',
+    image: '/attached_assets/prajwal.jpg',
     description: 'CFO, managing finances to drive growth and support our cybersecurity innovations.',
     linkedin: '#'
   }

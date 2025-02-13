@@ -14,7 +14,7 @@ import { FaGraduationCap } from "react-icons/fa";
 const companies = [
   {
     icon: SiAib,
-    name: 'IBM',
+    name: 'IBM Corporation',
     bg: 'bg-white',
     iconColor: 'text-[#000000]'
   },

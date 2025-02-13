@@ -16,10 +16,10 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-3xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="space-y-6 text-lg text-gray-300"
@@ -45,21 +45,6 @@ export default function About() {
               and unparalleled service quality. Your security is our mission, and we're here to
               support you every step of the way.
             </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            <div className="aspect-square rounded-full bg-red-600/10 absolute -top-4 -right-4 w-72 h-72 blur-3xl" />
-            <img
-              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-              alt="Cybersecurity Team"
-              className="rounded-lg shadow-2xl relative z-10"
-            />
-            <div className="absolute -bottom-4 -left-4 bg-red-600/10 w-72 h-72 rounded-full blur-3xl" />
           </motion.div>
         </div>
       </div>
