@@ -1,7 +1,15 @@
 
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function Calendly() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <section id="calendly" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,8 +27,11 @@ export default function Calendly() {
             Book a consultation with our cybersecurity experts
           </p>
         </motion.div>
-        <div className="calendly-inline-widget" data-url="https://calendly.com/cybershastra7/30min" style={{ minWidth: "320px", height: "700px" }}></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <div 
+          className="calendly-inline-widget" 
+          data-url="https://calendly.com/cybershastra7/30min" 
+          style={{ minWidth: '320px', height: '700px' }}
+        />
       </div>
     </section>
   );

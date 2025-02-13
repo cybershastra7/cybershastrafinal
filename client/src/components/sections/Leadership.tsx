@@ -4,9 +4,24 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
 
 const leaders = [
-  { name: 'Ashwin Pawar', role: 'CEO', image: '/attached_assets/ashwin.jpeg', description: 'CEO and AI Expert, integrating advanced AI technologies.', linkedin: '#' },
-  { name: 'Gaurish Bahurupi', role: 'CTO', image: '/attached_assets/gaurish.jpg', description: 'CTO and Red Team Specialist, focused on advanced offensive strategies.', linkedin: '#' },
-  { name: 'Prajwal Chitwar', role: 'CFO', image: '/attached_assets/prajwal.jpg', description: 'CFO, managing finances to drive growth.', linkedin: '#' }
+  { 
+    name: 'Ashwin Pawar', 
+    role: 'CEO', 
+    description: 'CEO and AI Expert, integrating advanced AI technologies.', 
+    linkedin: 'https://www.linkedin.com/in/ashwin-pawar-cybershastra/' 
+  },
+  { 
+    name: 'Gaurish Bahurupi', 
+    role: 'CTO', 
+    description: 'CTO and Red Team Specialist, focused on advanced offensive strategies.', 
+    linkedin: 'https://www.linkedin.com/in/gaurish-bahurupi-ab3079216/' 
+  },
+  { 
+    name: 'Prajwal Chitwar', 
+    role: 'CFO', 
+    description: 'CFO, managing finances to drive growth.', 
+    linkedin: 'https://www.linkedin.com/in/prajwal-chitwar/' 
+  }
 ];
 
 export default function Leadership() {
@@ -37,30 +52,20 @@ export default function Leadership() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden bg-gray-900 border-gray-800 transition-transform duration-300 hover:scale-105">
-                <CardContent className="p-0">
-                  <div className="aspect-square relative overflow-hidden">
-                    <img
-                      src={leader.image}
-                      alt={leader.name}
-                      className="object-cover w-full h-full transition-transform hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-white">{leader.name}</h3>
-                    <p className="text-red-500 font-medium">{leader.role}</p>
-                    <p className="text-gray-400 mt-2 text-sm">{leader.description}</p>
-                    <div className="flex gap-4 mt-4">
-                      <a 
-                        href={leader.linkedin} 
-                        className="text-gray-400 hover:text-red-500 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                    </div>
+              <Card className="bg-gray-900 border-gray-800">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-white">{leader.name}</h3>
+                  <p className="text-red-500 font-medium">{leader.role}</p>
+                  <p className="text-gray-400 mt-2">{leader.description}</p>
+                  <div className="flex gap-4 mt-4">
+                    <a 
+                      href={leader.linkedin} 
+                      className="text-gray-400 hover:text-red-500 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
                   </div>
                 </CardContent>
               </Card>
