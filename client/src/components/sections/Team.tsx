@@ -4,22 +4,25 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const team = [
   {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Security Officer',
-    image: 'https://images.unsplash.com/photo-1455849318743-b2233052fcff',
-    socials: { twitter: '#', linkedin: '#', github: '#' }
+    name: 'Ashwin Pawar',
+    role: 'CEO',
+    image: '/attached_assets/ashwin.jpeg',
+    socials: { linkedin: '#' },
+    description: 'CEO and AI Expert, integrating advanced AI technologies to revolutionize cybersecurity solutions for our clients.'
   },
   {
-    name: 'Mark Rodriguez',
-    role: 'Security Architect',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
-    socials: { twitter: '#', linkedin: '#', github: '#' }
+    name: 'Gaurish Bahurupi',
+    role: 'CTO',
+    image: '/attached_assets/gaurish.jpg',
+    socials: { linkedin: '#' },
+    description: 'CTO and Red Team Specialist, focused on strengthening cybersecurity with advanced offensive strategies to help clients stay secure.'
   },
   {
-    name: 'Emily Watson',
-    role: 'Threat Analyst',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
-    socials: { twitter: '#', linkedin: '#', github: '#' }
+    name: 'Prajwal Chitwar',
+    role: 'CFO',
+    image: '/attached_assets/prajwal.jpg',
+    socials: { linkedin: '#' },
+    description: 'CFO, managing finances to drive growth and support our cybersecurity innovations.'
   }
 ];
 
@@ -42,6 +45,44 @@ export default function Team() {
             and digital protection.
           </p>
         </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {team.map((member) => (
+            <motion.div
+              key={member.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-card rounded-lg overflow-hidden shadow-lg"
+            >
+              <div className="aspect-[4/3] relative">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                <p className="text-red-500 mb-3">{member.role}</p>
+                <p className="text-muted-foreground text-sm mb-4">{member.description}</p>
+                <div className="flex gap-4">
+                  {Object.entries(member.socials).map(([platform, url]) => (
+                    <a
+                      key={platform}
+                      href={url}
+                      className="text-muted-foreground hover:text-foreground"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="capitalize">{platform}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
