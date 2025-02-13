@@ -119,7 +119,7 @@ export default function Hero() {
 
             {/* Service Icons - Updated with specified services */}
             <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"  {/* Adjusted grid for better layout */}
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
