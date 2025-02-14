@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 node_modules
 dist
 .DS_Store
 server/public
 vite.config.ts.*
 *.tar.gz
+=======
+"CyberShatra/" 
+>>>>>>> fe838898a510c263fce0228daf39466fe73c4da5
